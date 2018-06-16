@@ -19,6 +19,12 @@ namespace Mod1_Lab2
 
             var Car2 = new Car("Red", 2008);
 
+            // Access static numbers
+            int carCount = Car.CountCars();
+
+            // Output to the console
+            Console.WriteLine($"There are {carCount} cars on inventory right now");
+
         }
     }
     // Declaring the Car() class
@@ -36,6 +42,8 @@ namespace Mod1_Lab2
         {
             this.Color = color;
             this.Year = year;
+            // Increment every time a constructor runs
+            instances++;
         }
 
         // Adding a Constructor
@@ -44,6 +52,8 @@ namespace Mod1_Lab2
         {
             this.Year = year;
             this.Mileage = mileage;
+            // Increment every time a constructor runs
+            instances++;
         }
 
         // Create integer variable and assign value to 0
